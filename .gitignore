@@ -7,10 +7,18 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Node / React
 node_modules
 dist
 dist-ssr
 *.local
+
+# Python / Flask
+__pycache__/
+venv/
+*.pyc
+instance/
+*.sqlite3
 
 # Editor directories and files
 .vscode/*
@@ -23,4 +31,6 @@ dist-ssr
 *.sln
 *.sw?
 
+# Environment files
 .env
+.env.*
