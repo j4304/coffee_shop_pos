@@ -1,42 +1,44 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+/* We can keep this simple and use Tailwind utility classes in index.css 
+   or the component file, but here's how you'd style in CSS */
+
+.app-container {
+  /* Uses Tailwind classes defined in index.css */
+  @apply bg-gray-900 min-h-screen flex items-center justify-center text-center p-4;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.app-header {
+  /* Uses Tailwind classes */
+  @apply bg-gray-800 p-10 rounded-xl shadow-2xl max-w-lg w-full;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.test-button {
+  /* Uses Tailwind classes for a modern button */
+  @apply bg-blue-600 text-white font-bold py-3 px-6 rounded-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply hover:bg-blue-700;
+  @apply disabled:bg-gray-500 disabled:cursor-not-allowed;
+  @apply focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.status-message {
+  /* Uses Tailwind classes */
+  @apply bg-gray-700 p-4 rounded-lg mt-6 text-left;
+  @apply border-l-4;
 }
 
-.card {
-  padding: 2em;
+/* Add color-specific border classes */
+.status-message.text-green-500 {
+  @apply border-green-500;
 }
 
-.read-the-docs {
-  color: #888;
+.status-message.text-red-500 {
+  @apply border-red-500;
+}
+
+.status-message.text-blue-500 {
+  @apply border-blue-500;
+}
+
+.status-message.text-gray-500 {
+  @apply border-gray-500;
 }
